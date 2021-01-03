@@ -16,13 +16,13 @@ const app = (() => {
 
         let meal = await fetchRandomMeal();
 
-        hideLoadingContainer();
         
         if ( meal.meals) {
+            hideLoadingContainer();
             showOutputContainer();
             renderOutputContainerElements(meal.meals[0]);
         } else {
-
+            
         }
     })
 
