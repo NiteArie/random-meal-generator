@@ -109,6 +109,40 @@ body {
     font-weight: bold;
 }
 
+.container__loading {
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__loading__content {
+    height: 50px;
+    width: 50px;
+    border: 3px solid hsl(230, 50%, 50%);
+    animation: rotates 1s, radius 0.5s, border-width 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotates {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes radius {
+    50% {
+        border-radius: 50%;
+    }
+}
+
+@keyframes border-width {
+    50% {
+        border-width: 8px;
+    }
+}
+
 .hidden {
     display: none;
 }

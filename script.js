@@ -1,5 +1,6 @@
 const app = (() => {
     const _outputContainer = document.querySelector(".container__output");
+    const _loadingContainer = document.querySelector(".container__loading");
     const _generateMealButton = document.querySelector(".container__generate__button");
     const _outputThumb = document.querySelector(".container__output__left__thumb");
     const _outputMealCategory = document.querySelector(".container__output__left__general__cate__content");
@@ -10,10 +11,18 @@ const app = (() => {
     const _outputVideoContainer = document.querySelector(".container__output__video");
 
     _generateMealButton.addEventListener("click", async (event) => {
+        showLoadingContainer();
+        hideOutputContainer();
+
         let meal = await fetchRandomMeal();
-        console.log(meal);
+
+        hideLoadingContainer();
+        
         if ( meal.meals) {
+            showOutputContainer();
             renderOutputContainerElements(meal.meals[0]);
+        } else {
+
         }
     })
 
@@ -160,5 +169,13 @@ const app = (() => {
 
     function hideOutputContainer() {
         _outputContainer.classList.add("hidden");
+    }
+
+    function showLoadingContainer() {
+        _loadingContainer.classList.remove("hidden");
+    }
+
+    function hideLoadingContainer() {
+        _loadingContainer.classList.add("hidden");
     }
 })();
