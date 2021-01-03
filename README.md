@@ -8,7 +8,7 @@ Generate a random meal from an API.
 
 * [X] User can click a button that will get a random meal from an external API (see below)
 * [X] The app should display: Recipe name, Ingredients, Instructions and a Picture of the meal
-* [ ] By clicking the button again, another meal will be generated
+* [X] By clicking the button again, another meal will be generated
 
 ## Bonus Feature
 
