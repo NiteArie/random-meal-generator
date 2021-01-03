@@ -12,7 +12,7 @@ Generate a random meal from an API.
 
 ## Bonus Feature
 
-* [ ] The app should display a YouTube Video
+* [X] The app should display a YouTube Video
 
 ## API
 
