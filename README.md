@@ -1,5 +1,9 @@
 # random-meal-generator (Random Meal Generator)
 
+## Current Version
+
+Live Version: [https://nitearie.github.io/random-meal-generator/](https://nitearie.github.io/random-meal-generator/)
+
 ## General Info
 
 Generate a random meal from an API.
